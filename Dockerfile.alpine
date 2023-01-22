@@ -1,0 +1,9 @@
+FROM ruby:2.7.7-alpine
+
+WORKDIR /usr/src/app
+
+COPY ./Gemfile /usr/src/app
+COPY ./Gemfile.lock /usr/src/app
+
+RUN bundle install
+
